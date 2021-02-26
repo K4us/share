@@ -1,0 +1,27 @@
+{
+  "name": "k4us-share",
+  "version": "1.0.0",
+  "description": "Assets from K4us",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K4us/share.git"
+  },
+  "keywords": [
+    "Khmer",
+    "Share",
+    "K4us"
+  ],
+  "author": "Raksa Eng <eng.raksa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/K4us/share/issues"
+  },
+  "homepage": "https://github.com/K4us/share#readme",
+  "dependencies": {
+    "svgson": "^4.1.0"
+  }
+}
