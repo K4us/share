@@ -27,6 +27,8 @@
  *---------------------------------------------------------------------------- */
 'use strict';
 
+const khmerChessPieces = require('./khmerChessPieces');
+
 module.exports = {
     khmerChessPieces
 };

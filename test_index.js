@@ -27,7 +27,7 @@
  *---------------------------------------------------------------------------- */
 'use strict';
 
-const khmerChessPieces = require('./khmerChessPieces');
+const { khmerChessPieces } = require('.');
 
 khmerChessPieces.kingSVG.init();
 console.log(khmerChessPieces.kingSVG.pathData);
