@@ -25,12 +25,10 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-'use strict';
-
-class SVGManager {
-    init();
-    get pathData();
-    get svgString();
+type SVGManager = {
+    init(): void;
+    pathData: string[];
+    svgString: string;
 }
 export const khmerChessPieces: {
     kingSVG: SVGManager;
