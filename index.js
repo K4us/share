@@ -25,8 +25,6 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-'use strict';
-
 const khmerChessPieces = require('./khmerChessPieces');
 
 module.exports = {

@@ -1,6 +1,6 @@
 {
   "name": "k4us-share",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Assets from K4us",
   "main": "index.js",
   "types": "index.d.ts",

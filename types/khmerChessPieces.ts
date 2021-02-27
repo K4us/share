@@ -25,27 +25,34 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-'use strict';
+import svgson, { INode } from 'svgson';
 
-const fs = require('fs');
-const path = require('path');
-const svgson = require('svgson');
+const king = require('../font/svg-optimized/$K_KhmerChess.svg');
+const queen = require('../font/svg-optimized/$Q_KhmerChess.svg');
+const general = require('../font/svg-optimized/$G_KhmerChess.svg');
+const horse = require('../font/svg-optimized/$H_KhmerChess.svg');
+const boat = require('../font/svg-optimized/$B_KhmerChess.svg');
+const fish = require('../font/svg-optimized/$F_KhmerChess.svg');
+const transformFish = require('../font/svg-optimized/$T_KhmerChess.svg');
 
 class SVGManager {
-    constructor(svgPath) {
-        this.svgPath = svgPath;
+    svg: string;
+    svgsonInstant: INode;
+    constructor(svg: string) {
+        this.svg = svg;
     }
     init() {
-        const data = fs.readFileSync(this.svgPath, 'utf8')
-        this.svgsonInstant = svgson.parseSync(data);
+        this.svgsonInstant = svgson.parseSync(this.svg);
     }
-    get pathData() {
+    get pathData(): string[] {
         if (!this.svgsonInstant) {
             throw new Error('Call init() first');
         }
-        return this.svgsonInstant.children.map(element => element.attributes.d)
+        return this.svgsonInstant.children.map((element: INode) => {
+            return element.attributes.d;
+        })
     }
-    get svgString() {
+    get svgString(): string {
         if (!this.svgsonInstant) {
             throw new Error('Call init() first');
         }
@@ -53,16 +60,10 @@ class SVGManager {
     }
 }
 
-const resolveSVGPath = (name) => {
-    return path.resolve(`./font/svg-optimized/${name}`);
-}
-
-module.exports = {
-    kingSVG: new SVGManager(resolveSVGPath('\$K_KhmerChess.svg')),
-    queenSVG: new SVGManager(resolveSVGPath('\$Q_KhmerChess.svg')),
-    generalSVG: new SVGManager(resolveSVGPath('\$G_KhmerChess.svg')),
-    horseSVG: new SVGManager(resolveSVGPath('\$H_KhmerChess.svg')),
-    boatSVG: new SVGManager(resolveSVGPath('\$B_KhmerChess.svg')),
-    fishSVG: new SVGManager(resolveSVGPath('\$F_KhmerChess.svg')),
-    transformFishSVG: new SVGManager(resolveSVGPath('\$T_KhmerChess.svg')),
-};
+export const kingSVG = new SVGManager(king);
+export const queenSVG = new SVGManager(queen);
+export const generalSVG = new SVGManager(general);
+export const horseSVG = new SVGManager(horse);
+export const boatSVG = new SVGManager(boat);
+export const fishSVG = new SVGManager(fish);
+export const transformFishSVG = new SVGManager(transformFish);
