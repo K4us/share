@@ -2,9 +2,11 @@
 
 ## Khmer Chess Font Family
 
-`./font`
+![Khmer Chess Font](./font/exported/KhmerChessFont.PNG "Khmer Chess Font")
 
 ## Khmer Chess Font SVG helper
+
+Khmer Chess Font has been using through `k4us-share` in [Khmer Chess Board](https://github.com/K4us/khmer-chess-board.js)
 
 A Typescript and Node.js base helpers for getting Khmer Chess SVG.
 
