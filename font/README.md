@@ -1,5 +1,7 @@
 # Khmer Chess Font
 
+![Khmer Chess Font](./exported/KhmerChessFont.PNG "Khmer Chess Font")
+
 [Font Formats](https://css-tricks.com/understanding-web-fonts-getting/#font-formats)
 
 * SVG `exported/KhmerChess.svg`
