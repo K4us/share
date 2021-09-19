@@ -36,13 +36,13 @@ const fish = require('../font/svg-optimized/$F_KhmerChess.svg');
 const transformFish = require('../font/svg-optimized/$T_KhmerChess.svg');
 
 class SVGManager {
-    svg: string;
+    _svg: string;
     svgsonInstant: INode | null = null;
     constructor(svg: string) {
-        this.svg = svg;
+        this._svg = svg;
     }
     init() {
-        this.svgsonInstant = svgson.parseSync(this.svg);
+        this.svgsonInstant = svgson.parseSync(this._svg);
     }
     get pathData(): string[] {
         if (!this.svgsonInstant) {

@@ -19,8 +19,7 @@ $ npm i k4us-share
 Typescript
 
 ```typescript
-import { khmerChessPieces } from 'k4us-share';
-const {
+import {
     kingSVG,
     queenSVG,
     generalSVG,
@@ -28,13 +27,12 @@ const {
     boatSVG,
     fishSVG,
     transformFishSVG,
-} = khmerChessPieces;
+} from 'k4us-share';
 ```
 
 Node.js
 
 ```javascript
-const { khmerChessPieces } = require('k4us-share');
 const {
     kingSVG,
     queenSVG,
@@ -43,7 +41,12 @@ const {
     boatSVG,
     fishSVG,
     transformFishSVG,
-} = khmerChessPieces;
+} = require('k4us-share');
+```
+
+```html
+<script src="k4us-share/dist/k4us-share.umd.js"></script>
+
 ```
 
 ## Licence

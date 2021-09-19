@@ -1,9 +1,9 @@
 {
   "name": "k4us-share",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Assets from K4us",
-  "main": "dist/k4us-share.bundle.js",
-  "types": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "src/khmerChessPieces.ts",
   "scripts": {
     "build:bundle": "webpack --config webpack.config.js",
     "build:js": "del-cli dist -f && tsc",

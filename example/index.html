@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>Khmer Chess Board</title>
+    <script src="../dist/k4us-share.umd.js"></script>
+</head>
+
+<body>
+    <script>
+        khmerChessPieces.kingSVG.init();
+        var div = document.createElement('div');
+        div.innerHTML = khmerChessPieces.kingSVG.svgString;
+        div.style.width = '300px';
+        document.body.appendChild(div);
+    </script>
+</body>
+
+</html>
