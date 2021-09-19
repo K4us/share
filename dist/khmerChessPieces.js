@@ -42,10 +42,8 @@ var transformFish = require('../font/svg-optimized/$T_KhmerChess.svg');
 var SVGManager = /** @class */ (function () {
     function SVGManager(svg) {
         this.svg = svg;
-    }
-    SVGManager.prototype.init = function () {
         this.svgsonInstant = svgson_1.default.parseSync(this.svg);
-    };
+    }
     Object.defineProperty(SVGManager.prototype, "pathData", {
         get: function () {
             if (!this.svgsonInstant) {

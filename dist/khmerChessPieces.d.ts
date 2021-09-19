@@ -3,7 +3,6 @@ declare class SVGManager {
     svg: string;
     svgsonInstant: INode;
     constructor(svg: string);
-    init(): void;
     get pathData(): string[];
     get svgString(): string;
 }

@@ -40,8 +40,6 @@ class SVGManager {
     svgsonInstant: INode;
     constructor(svg: string) {
         this.svg = svg;
-    }
-    init() {
         this.svgsonInstant = svgson.parseSync(this.svg);
     }
     get pathData(): string[] {
