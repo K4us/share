@@ -1,8 +1,9 @@
 import { INode } from 'svgson';
 declare class SVGManager {
     svg: string;
-    svgsonInstant: INode;
+    svgsonInstant: INode | null;
     constructor(svg: string);
+    init(): void;
     get pathData(): string[];
     get svgString(): string;
 }

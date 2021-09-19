@@ -37,9 +37,11 @@ const transformFish = require('../font/svg-optimized/$T_KhmerChess.svg');
 
 class SVGManager {
     svg: string;
-    svgsonInstant: INode;
+    svgsonInstant: INode | null = null;
     constructor(svg: string) {
         this.svg = svg;
+    }
+    init() {
         this.svgsonInstant = svgson.parseSync(this.svg);
     }
     get pathData(): string[] {
