@@ -19,15 +19,16 @@ $ npm i k4us-share
 Typescript
 
 ```typescript
-import {
-   boatSVG,
-   fishSVG,
-   generalSVG,
-   horseSVG,
-   kingSVG,
-   queenSVG,
-   transformFishSVG,
-} from 'k4us-share/types';
+import { khmerChessPieces } from 'k4us-share';
+const {
+    kingSVG,
+    queenSVG,
+    generalSVG,
+    horseSVG,
+    boatSVG,
+    fishSVG,
+    transformFishSVG,
+} = khmerChessPieces;
 ```
 
 Node.js

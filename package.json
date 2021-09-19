@@ -1,10 +1,11 @@
 {
   "name": "k4us-share",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Assets from K4us",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
   "scripts": {
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -24,5 +25,9 @@
   "homepage": "https://github.com/K4us/share#readme",
   "dependencies": {
     "svgson": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.9.2",
+    "typescript": "^4.4.3"
   }
 }

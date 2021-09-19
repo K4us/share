@@ -1,6 +1,7 @@
+"use strict";
 /*
  * Copyright (c) 2021, K4us
- * Author: Raksa Eng <eng.raksa@gmail.com>
+ * Author: Raksa Eng <eng.raksa@gmail.com>, K4us Net <k4us.net@gmail.com>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -25,44 +26,26 @@
  * POSSIBILITY OF SUCH DAMAGE.
  *
  *---------------------------------------------------------------------------- */
-'use strict';
-
-const fs = require('fs');
-const path = require('path');
-const svgson = require('svgson');
-
-class SVGManager {
-    constructor(svgPath) {
-        this.svgPath = svgPath;
-    }
-    init() {
-        const data = fs.readFileSync(this.svgPath, 'utf8')
-        this.svgsonInstant = svgson.parseSync(data);
-    }
-    get pathData() {
-        if (!this.svgsonInstant) {
-            throw new Error('Call init() first');
-        }
-        return this.svgsonInstant.children.map(element => element.attributes.d)
-    }
-    get svgString() {
-        if (!this.svgsonInstant) {
-            throw new Error('Call init() first');
-        }
-        return svgson.stringify(this.svgsonInstant);
-    }
-}
-
-const resolveSVGPath = (name) => {
-    return path.resolve(`./font/svg-optimized/${name}`);
-}
-
-module.exports = {
-    kingSVG: new SVGManager(resolveSVGPath('\$K_KhmerChess.svg')),
-    queenSVG: new SVGManager(resolveSVGPath('\$Q_KhmerChess.svg')),
-    generalSVG: new SVGManager(resolveSVGPath('\$G_KhmerChess.svg')),
-    horseSVG: new SVGManager(resolveSVGPath('\$H_KhmerChess.svg')),
-    boatSVG: new SVGManager(resolveSVGPath('\$B_KhmerChess.svg')),
-    fishSVG: new SVGManager(resolveSVGPath('\$F_KhmerChess.svg')),
-    transformFishSVG: new SVGManager(resolveSVGPath('\$T_KhmerChess.svg')),
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.khmerChessPieces = void 0;
+exports.khmerChessPieces = __importStar(require("./khmerChessPieces"));
+//# sourceMappingURL=index.js.map

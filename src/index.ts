@@ -26,4 +26,4 @@
  *
  *---------------------------------------------------------------------------- */
 
-export * from './khmerChessPieces';
+export * as khmerChessPieces from './khmerChessPieces';
