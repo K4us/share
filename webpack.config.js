@@ -2,18 +2,18 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, 'dist');
 
-const umd = {
+const kcpUmd = {
     context: ROOT,
     entry: {
-        'k4us-share': './khmerChessPieces.js'
+        'k4us-share': './index.js'
     },
     output: {
         path: ROOT,
         filename: '[name].umd.js',
         library: {
-            name: 'khmerChessPieces',
+            name: 'k4usShare',
             type: 'umd',
-          },
+        },
     },
     mode: 'production',
     devtool: 'source-map',
@@ -23,16 +23,24 @@ const umd = {
     module: {
         rules: [
             {
+                test: /\.(jpe?g|png|ttf|eot|woff(2)?|mp3)(\?[a-z0-9=&.]+)?$/,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    }
+                ]
+            },
+            {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
             }
         ]
     }
 };
-const commonjs = {
+const kcpCommonjs = {
     context: ROOT,
     entry: {
-        'k4us-share': './khmerChessPieces.js'
+        'k4us-share': './index.js'
     },
     output: {
         path: ROOT,
@@ -47,6 +55,14 @@ const commonjs = {
     module: {
         rules: [
             {
+                test: /\.(jpe?g|png|ttf|eot|woff(2)?|mp3)(\?[a-z0-9=&.]+)?$/,
+                use: [
+                    {
+                        loader: 'url-loader'
+                    }
+                ]
+            },
+            {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
             }
@@ -54,5 +70,5 @@ const commonjs = {
     }
 };
 
-module.exports = [umd, commonjs];
+module.exports = [kcpUmd, kcpCommonjs];
 

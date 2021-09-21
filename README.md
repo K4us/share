@@ -27,6 +27,9 @@ import {
     boatSVG,
     fishSVG,
     transformFishSVG,
+    moveAudio,
+    captureAudio,
+    checkAudio,
 } from 'k4us-share';
 ```
 
@@ -41,6 +44,9 @@ const {
     boatSVG,
     fishSVG,
     transformFishSVG,
+    moveAudio,
+    captureAudio,
+    checkAudio,
 } = require('k4us-share');
 ```
 

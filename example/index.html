@@ -11,11 +11,17 @@
 
 <body>
     <script>
-        khmerChessPieces.kingSVG.init();
+        k4usShare.kingSVG.init();
         var div = document.createElement('div');
-        div.innerHTML = khmerChessPieces.kingSVG.svgString;
+        div.innerHTML = k4usShare.kingSVG.svgString;
         div.style.width = '300px';
         document.body.appendChild(div);
+
+        var sound = document.createElement('audio');
+        sound.controls = 'controls';
+        sound.src = k4usShare.moveAudio;
+        sound.type = 'audio/mpeg';
+        document.body.appendChild(sound);
     </script>
 </body>
 
